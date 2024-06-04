@@ -8,10 +8,10 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
 
-    --background: 247, 247, 232;
-    --foreground: 85, 113, 116;
-    --primary: 157, 173, 127;
-    --secondary: 199, 207, 183;
+    --background: 37, 67, 54;
+    --foreground: 107, 138, 122;
+    --primary: 183, 181, 151;
+    --secondary: 218, 211, 190;
   }
 
   body {
