@@ -1,15 +1,15 @@
 import Image from "next/image";
 import food from "@/data/food";
-import FoodCard from "./components/FoodCard";
+import FoodCard from "../components/FoodCard";
 import { Food } from "@/types";
 import { Button } from "@mui/material";
 
 export default function Home() {
   return (
     <main className="py-6 px-4 flex flex-col gap-5">
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-start items-center ">
         <Button
-          className="w-1/3"
+          className="w-1/6"
           color="primary"
           size="large"
           fullWidth
