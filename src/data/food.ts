@@ -1,158 +1,143 @@
 const foods = [
   {
-    name: "Pizza Margherita",
+    name: "Jiaozi",
     ingredients: [
-      "Pizza dough",
-      "Tomatoes",
-      "Mozzarella cheese",
-      "Basil",
-      "Olive oil",
-      "Salt",
+      "WHEAT FLOUR",
+      "GROUND BEEF",
+      "GROUND PORK",
+      "NAPA CABBAGE",
+      "Bamboo Shoots",
+      "SCALLIONS",
+      "Ginger",
+      "Garlic",
     ],
     description:
-      "A classic Italian pizza with a simple yet delicious combination of fresh tomatoes, mozzarella cheese, and basil leaves.",
+      "These Chinese dumplings known as jiaozi, consisting of a thinly rolled piece of dough which contains either meat or a vegetable filling, are one of the most popular and most commonly eaten dishes in China and East Asia.",
     thumbnail:
-      "https://www.tasteatlas.com/images/dishes/1501b7a18cab4f97b3cb834157712052.jpg",
+      "https://www.tasteatlas.com/images/dishes/82fbbf7148654aa29148960471e86393.jpg?mw=1300",
   },
   {
-    name: "Sushi",
+    name: "Gyoza",
     ingredients: [
-      "Vinegared rice",
-      "Raw fish (tuna, salmon)",
-      "Seaweed",
-      "Vegetables",
-    ],
-    description:
-      "A Japanese dish consisting of vinegared rice accompanied by various ingredients such as seafood, vegetables, and occasionally tropical fruits.",
-    thumbnail:
-      "https://www.tasteatlas.com/Images/Dishes/fde953e5aa504e8c83a84691582b0399.jpg",
-  },
-  {
-    name: "Burger",
-    ingredients: [
-      "Beef patty",
-      "Hamburger bun",
-      "Lettuce",
-      "Tomato",
-      "Cheese",
-      "Pickles",
-      "Onions",
-      "Condiments",
-    ],
-    description:
-      "A popular American sandwich consisting of a cooked patty of ground meat placed inside a sliced bun, often garnished with various toppings.",
-    thumbnail:
-      "https://www.tasteatlas.com/Images/Dishes/223d2928b1e04701854f387c30d940f0.jpg",
-  },
-  {
-    name: "Pad Thai",
-    ingredients: [
-      "Rice noodles",
-      "Shrimp",
-      "Tofu",
-      "Eggs",
-      "Peanuts",
-      "Bean sprouts",
-      "Lime",
-      "Fish sauce",
-    ],
-    description:
-      "A traditional Thai stir-fried noodle dish known for its balance of sweet, sour, salty, and spicy flavors.",
-    thumbnail:
-      "https://www.tasteatlas.com/images/dishes/ad3ef1fb39eb42958e7462961951e45c.jpg",
-  },
-  {
-    name: "Tacos",
-    ingredients: [
-      "Tortillas",
-      "Beef",
+      "WHEAT FLOUR",
+      "Egg",
       "Chicken",
-      "Lettuce",
-      "Cheese",
-      "Salsa",
-      "Guacamole",
+      "CABBAGE",
+      "Chives",
+      "Ginger",
+      "Garlic",
     ],
     description:
-      "A traditional Mexican dish composed of a folded or rolled tortilla filled with various mixtures, such as seasoned meat, beans, lettuce, and cheese.",
+      "The famous Japanese gyoza are crescent-shaped dumplings that have originated from the traditional Chinese jiaozi dumplings. The recipe was slightly altered to accommodate the Japanese taste, and gyoza soon became one of the favorite Japanese meals.",
     thumbnail:
-      "https://www.tasteatlas.com/images/dishes/967fe03b58464dad9f82d91650d98824.jpg",
+      "https://www.tasteatlas.com/Images/Dishes/3c16ad904018488f8c363413d356cacc.jpg?mw=1300",
   },
   {
-    name: "Ramen",
+    name: "Kimchi",
+    ingredients: [
+      "Radish",
+      "Oysters",
+      "Scallions",
+      "NAPA CABBAGE",
+      "Anchovies",
+      "Shrimps",
+      "Onion",
+      "Garlic",
+    ],
+    description:
+      "Although many people get a chill through their spine at the very mention of the word pickles, Koreans have found a way to make fermented pickled vegetables interesting, tasty and titillating. A classic starter or a side dish to any Korean meal, these spicy, salty, sweet and sour vegetables known as kimchi start their way sliced, tied in bundles, and marinated in brine with hot chili peppers, salty fish paste, leeks, ginger, sugar, and garlic.",
+    thumbnail:
+      "https://www.tasteatlas.com/images/dishes/2afd12a4d2434e649bd9c00ef63f517e.jpg?mw=1300",
+  },
+  {
+    name: "Onion Rings",
+    ingredients: [
+      "Garlic",
+      "Flour",
+      "Milk",
+      "Beer",
+      "Eggs",
+      "Salt",
+      "Lard",
+      "Cream",
+    ],
+    description:
+      "Onion rings are a popular American side dish item that is usually served alongside burgers or other fast food varieties, and they are usually accompanied by ketchup, mayonnaise, or some other dipping sauce. These crispy rings are commonly found in the United States, Canada, Ireland, Asia, Australia, and the United Kingdom.",
+    thumbnail:
+      "https://www.tasteatlas.com/Images/Dishes/8e1198424262483fb90cd4baa3f8c190.jpg?mw=1300",
+  },
+  {
+    name: "Varenyky",
+    ingredients: ["Flour", "Eggs", "Potatos", "Fresh Cheese", "Onion"],
+    description:
+      "Originating from the historical region of Red Ruthenia, these soft, crescent-shaped dumplings are filled with a combination of potatoes and cheese, which is occasionally modified with various seasonings or fried onions. Pierogi ruskie are usually boiled and shortly fried until they develop a crispy texture.",
+    thumbnail:
+      "https://www.tasteatlas.com/images/dishes/da89463b907a4fc48d442deff9a93c81.jpg?mw=1300",
+  },
+  {
+    name: "Caprese Salad",
+    ingredients: ["Tomato", "Mozzarella", "Basil", "Olive Oil"],
+    description:
+      "Nothing embodies the essence of summer in southern Italy like vibrant colors of the flavorful insalata Caprese, a true classic of Neapolitan cuisine. The perfect combination of ripe, sun-kissed tomatoes, creamy mozzarella and fresh basil - this simple salad is believed to have originated on the island of Capri, hence the name.",
+    thumbnail:
+      "https://www.tasteatlas.com/images/dishes/2eea345a053b406495d51e502d3f70ef.jpg?mw=1300",
+  },
+  {
+    name: "Dan Dan noodles",
     ingredients: [
       "Noodles",
-      "Broth",
-      "Pork",
-      "Egg",
-      "Green onions",
-      "Nori",
-      "Bamboo shoots",
-    ],
-    description:
-      "A Japanese noodle soup consisting of Chinese-style wheat noodles served in a meat or fish-based broth, often flavored with soy sauce or miso, and uses toppings such as sliced pork, nori, and scallions.",
-    thumbnail:
-      "https://www.tasteatlas.com/images/dishes/b6b9680a32c84a9381a1ea5f5e529698.jpg",
-  },
-  {
-    name: "Paella",
-    ingredients: [
-      "Rice",
-      "Saffron",
-      "Chicken",
-      "Seafood",
-      "Green beans",
-      "Tomato",
-      "Olive oil",
-    ],
-    description:
-      "A Spanish rice dish originally from Valencia. Paella is one of the best-known dishes in Spanish cuisine and includes a variety of seafood, meat, and vegetables.",
-    thumbnail:
-      "https://www.tasteatlas.com/images/dishes/0b456cded8e245acb83036114c806091.jpg",
-  },
-  {
-    name: "Bibimbap",
-    ingredients: [
-      "Rice",
-      "Beef",
-      "Egg",
-      "Vegetables",
-      "Gochujang",
-      "Soy sauce",
-      "Sesame oil",
-    ],
-    description:
-      "A Korean rice dish. The term 'bibim' means mixing various ingredients, while 'bap' refers to rice. Bibimbap is served as a bowl of warm white rice topped with sautéed and seasoned vegetables and gochujang, soy sauce, or doenjang.",
-    thumbnail:
-      "https://www.tasteatlas.com/images/dishes/4dd65e828a014639994d77ab09f5dba5.jpg",
-  },
-  {
-    name: "Dim Sum",
-    ingredients: [
-      "Dumpling wrappers",
-      "Pork",
-      "Shrimp",
-      "Vegetables",
-      "Soy sauce",
-    ],
-    description:
-      "A variety of Chinese dishes that are traditionally served with tea. They are made in bite-sized portions and are often served in small steamer baskets or on small plates.",
-    thumbnail:
-      "https://www.tasteatlas.com/images/dishes/a000ac2b437b4c5aae6ca6b6b8ac384f.jpg",
-  },
-  {
-    name: "Falafel",
-    ingredients: [
-      "Chickpeas",
+      "Ground Chicken",
+      "Sichuan pepper",
       "Garlic",
-      "Onion",
-      "Parsley",
-      "Cumin",
-      "Coriander",
+      "Cinnamon",
+      "Star Anise",
+      "Preserved mustard greens",
+      "Five-spice powder",
     ],
     description:
-      "A deep-fried ball or patty made from ground chickpeas, fava beans, or both. Falafel is a traditional Middle Eastern food that is often served in a pita, which acts as a pocket, or wrapped in a flatbread.",
+      "Traditional dan dan noodles are a true classic of Chinese cuisine. The star of the dish is a spicy sauce served with the noodles. Made with chili oil, preserved vegetables, Sichuan peppercorn, and sometimes sesame or peanut paste, the sauce bursts with heat and complex flavors.",
     thumbnail:
-      "https://www.tasteatlas.com/images/dishes/6a7d870a48e34847b06f1711907ccf8a.jpg",
+      "https://www.tasteatlas.com/Images/Dishes/148ba9db636c40f699567b013e9828c5.jpg?mw=1300",
+  },
+  {
+    name: "Steak tartare",
+    ingredients: [
+      "Beef",
+      "Mastard",
+      "Worcestershire sauce",
+      "Black Peeper",
+      "Salt",
+      "Eggs",
+    ],
+    description:
+      "Steak tartare is an appetizer made with finely chopped raw beef or horse meat that is seasoned with salt, pepper, Worcestershire sauce, and either Tabasco or mustard. The meat is combined with a raw egg yolk, capers, onions, parsley, and (sometimes) chopped gherkins.",
+    thumbnail:
+      "https://www.tasteatlas.com/images/dishes/baab0ab2a0b041f883f01e68ac9f1ba5.jpg?mw=1300",
+  },
+  {
+    name: "Smørrebrød",
+    ingredients: [],
+    description:
+      "Smørrebrød is a traditional Danish open-faced sandwich consisting of buttered rye bread that is topped with numerous ingredients and typically accompanied by vegetables, herbs, and salads. Toppings include ingredients such as cold cuts of meat, cheeses, spreads, meatballs, caviar, and condiments such as mayonnaise.",
+    thumbnail:
+      "https://www.tasteatlas.com/Images/Dishes/38f732904c25404e969194da16fe3aed.jpg?mw=1300",
+  },
+  {
+    name: "Tzatziki",
+    ingredients: [
+      "Yogurt",
+      "Cocumber",
+      "Garlic",
+      "Olive Oil",
+      "Dill",
+      "Mint",
+      "Parsley",
+      "Vinegar",
+    ],
+    description:
+      "Tzatziki is a Greek concoction made from yogurt, cucumbers, garlic, and numerous herbs and spices such as dill, mint, or parsley. It is usually served as a sauce accompanying many meat dishes, as a simple dip, or an appetizer. Its name is derived from the Turkish word cacik, denoting a very similar dip, although some suspect that tzatziki was derived from the Indian raita dip.",
+    thumbnail:
+      "https://www.tasteatlas.com/Images/Dishes/e2d029df5265430daf503931b2bb8efb.jpg?mw=1300",
   },
 ];
 
