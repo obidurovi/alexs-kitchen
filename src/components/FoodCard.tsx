@@ -12,6 +12,8 @@ import { FaRegEdit } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Food } from "@/types";
+import { Modal } from "@mui/material";
+import ViewModal from "./Modal/ViewModal";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -44,8 +46,9 @@ export default function FoodCard({ food }: { food: Food }) {
         sx={{ mt: "auto" }}
       >
         <IconButton aria-label="view">
-          <FaEye />
+          <ViewModal food={food} />
         </IconButton>
+
         <IconButton aria-label="edit">
           <FaRegEdit />
         </IconButton>
