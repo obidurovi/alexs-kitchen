@@ -9,6 +9,7 @@ import CardActions from "@mui/material/CardActions";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { FaRegEdit } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Food } from "@/types";
 
@@ -42,10 +43,13 @@ export default function FoodCard({ food }: { food: Food }) {
         disableSpacing
         sx={{ mt: "auto" }}
       >
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label="view">
+          <FaEye />
+        </IconButton>
+        <IconButton aria-label="edit">
           <FaRegEdit />
         </IconButton>
-        <IconButton aria-label="share">
+        <IconButton aria-label="delete">
           <MdDelete />
         </IconButton>
       </CardActions>
