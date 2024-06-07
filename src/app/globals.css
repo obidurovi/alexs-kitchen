@@ -30,14 +30,19 @@
   height: 100dvh;
 }
 
-.css-189e9pj-MuiButtonBase-root-MuiButton-root {
+.add-button {
   background-color: #6b8a7a;
   margin-left: 20px;
 }
 
-.css-189e9pj-MuiButtonBase-root-MuiButton-root:hover {
+.add-button:hover {
   background-color: #dad3be;
   color: black;
   font-weight: 500;
   border: 1px solid #6b8a7a;
+}
+
+.css-qvvwhh {
+  left: 35%;
+  top: 25%;
 }
