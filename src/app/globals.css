@@ -46,3 +46,14 @@
   left: 35%;
   top: 25%;
 }
+
+.add-button-form {
+  background-color: #6b8a7a;
+}
+
+.add-button-form:hover {
+  background-color: #dad3be;
+  color: black;
+  font-weight: 500;
+  border: 1px solid #6b8a7a;
+}
