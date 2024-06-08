@@ -109,3 +109,39 @@ Output:
 { id: 6, name: "Shrimp Pasta" }
 ]
 ```
+
+First of all I need to define a function which will take two parameters.
+`javascript
+    function listMenuItemsByType(arr, type) {
+    `
+This line defines a function named **`listMenuItemsByType`** which takes two parameters -**`arr`**: An array of menu collections.
+
+- **`type`**: A string representing type of menu we are interested in (e.g., "Vegetarian" or "Non-Vegetarian").
+
+Now I have to find the Menu of the specified type. So,
+
+```javascript
+const menu = arr.find((menu) => menu.type === type);
+```
+
+this line uses the **`find`** method to search through the **`arr`** array. The **`find`** method iterates over each element (which are objects representing menus) in the array and returns the first element that satisfies the condition provided by callback function.
+The callback function checks whether the **`type`** property of the current menu object matches the **`type`** passed to the function. If a matching menu is found, it is assigned to the **`menu`** variable.
+
+Now I have to return the menu items. So the code below:
+
+```javascript
+return menu ? menu.menuItems : [];
+```
+
+This line uses the ternary operator to check if a matching **`menu`** was found:
+
+- if **`menu`** is truthy, it returns the **`menuItems`** property of that menu. **`menuItems`** is an array of object, each representing a menu item.
+- if **`menu`** is falsy, it returns an empty array **`[]`**.
+
+After that we can get our output.
+
+```javascript
+console.log(listMenuItemsByType(dummyArr, "Non-Vegetarian"));
+```
+
+The line calls the **`listMenuItemsByType`** function with **`dummyArr`** as the array of menu collections and **`Non-vegetarian`** as the type. The **`console.log`** statement then prints the result to the console.
