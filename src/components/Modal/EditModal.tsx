@@ -27,7 +27,7 @@ const style = {
   p: 4,
 };
 
-export default function EditModal({ food }: { food: Food }) {
+export default function EditModal({ food, setIsUpdate }: { food: Food }) {
   const [open, setOpen] = React.useState(false);
   const [editedFood, setEditedFood] = React.useState<Food>(food);
   const handleOpen = () => setOpen(true);
@@ -51,6 +51,7 @@ export default function EditModal({ food }: { food: Food }) {
         .then((res) => {
           setEditedFood(res.data);
           handleClose();
+          setIsUpdate(true);
         })
         .catch((error) => {
           console.error("Error updating food:", error);
