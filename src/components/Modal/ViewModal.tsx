@@ -4,69 +4,30 @@ import * as React from "react";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { useSpring, animated } from "@react-spring/web";
+import Fade from "@mui/material/Fade";
+import { Food } from "@/types";
 import { FaEye } from "react-icons/fa";
 import { IconButton } from "@mui/material";
-import { Food } from "@/types";
-
-interface FadeProps {
-  children: React.ReactElement;
-  in?: boolean;
-  onClick?: any;
-  onEnter?: (node: HTMLElement, isAppearing: boolean) => void;
-  onExited?: (node: HTMLElement, isAppearing: boolean) => void;
-  ownerState?: any;
-}
-
-const Fade = React.forwardRef<HTMLDivElement, FadeProps>(function Fade(
-  props,
-  ref
-) {
-  const {
-    children,
-    in: open,
-    onClick,
-    onEnter,
-    onExited,
-    ownerState,
-    ...other
-  } = props;
-  const style = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: open ? 1 : 0 },
-    onStart: () => {
-      if (open && onEnter) {
-        onEnter(null as any, true);
-      }
-    },
-    onRest: () => {
-      if (!open && onExited) {
-        onExited(null as any, true);
-      }
-    },
-  });
-
-  return (
-    <animated.div ref={ref} style={style} {...other}>
-      {React.cloneElement(children, { onClick })}
-    </animated.div>
-  );
-});
 
 const style = {
   position: "absolute" as "absolute",
-  borderRadius: 5,
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 1000,
+  width: {
+    xs: 300, // width on extra-small screens
+    sm: 400, // width on small screens and up
+    md: 500, // width on medium screens and up
+    lg: 600, // width on large screens and up
+    xl: 700, // width on extra-large screens and up
+  },
   bgcolor: "background.paper",
-  color: "black",
+  borderRadius: "10px",
   boxShadow: 24,
   p: 4,
 };
 
-export default function ViewModal({ food }: { food: Food }) {
+export default function TransitionsModal({ food }: { food: Food }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -77,32 +38,37 @@ export default function ViewModal({ food }: { food: Food }) {
         <FaEye />
       </IconButton>
       <Modal
-        aria-labelledby="spring-modal-title"
-        aria-describedby="spring-modal-description"
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
         open={open}
         onClose={handleClose}
         closeAfterTransition
         slots={{ backdrop: Backdrop }}
         slotProps={{
           backdrop: {
-            TransitionComponent: Fade,
+            timeout: 500,
           },
         }}
       >
-        <Box sx={style}>
-          <div className="flex flex-col justify-center items-center">
-            <img
-              src={food.thumbnail}
-              className="object-cover rounded-2xl size-full content-center"
-            ></img>
-            <h1 id="spring-modal-title" className="text-3xl p-4 text-center">
-              {food.name}
-            </h1>
-            <p id="spring-modal-description" className="text-center text-base">
-              {food.description}
-            </p>
-          </div>
-        </Box>
+        <Fade in={open}>
+          <Box sx={style}>
+            <div className="flex flex-col justify-center items-center">
+              <img
+                src={food.thumbnail}
+                className="object-cover rounded-2xl size-full content-center"
+              ></img>
+              <h1 id="spring-modal-title" className="text-3xl p-4 text-center">
+                {food.name}
+              </h1>
+              <p
+                id="spring-modal-description"
+                className="text-center text-base"
+              >
+                {food.description}
+              </p>
+            </div>
+          </Box>
+        </Fade>
       </Modal>
     </div>
   );
