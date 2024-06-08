@@ -37,7 +37,7 @@ export default function AddList() {
   });
 
   // handle input change
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     setInput({
       ...input,
       [e.target.name]: e.target.value,
@@ -45,7 +45,7 @@ export default function AddList() {
   };
 
   // handle foods form
-  const handleFoodsForm = (e) => {
+  const handleFoodsForm = (e: any) => {
     e.preventDefault();
     if (input.name || input.description || input.thumbnail) {
       axios.post("http://localhost:5050/foods", input).then((res) => {

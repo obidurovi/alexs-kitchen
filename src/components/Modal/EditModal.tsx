@@ -34,7 +34,7 @@ export default function EditModal({ food }: { food: Food }) {
   const handleClose = () => setOpen(false);
 
   // handle edit data
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { id, value } = e.target;
     setEditedFood((prevFood) => ({
       ...prevFood,
@@ -43,7 +43,7 @@ export default function EditModal({ food }: { food: Food }) {
   };
 
   // handle submit form
-  const handleEditForm = (e) => {
+  const handleEditForm = (e: any) => {
     e.preventDefault();
     if (editedFood.name || editedFood.description || editedFood.thumbnail) {
       axios
