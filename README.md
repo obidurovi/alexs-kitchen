@@ -118,7 +118,7 @@ First of all I need to define a function which will take two parameters.
 
 This line defines a function named **`listMenuItemsByType`** which takes two parameters.
 
--**`arr`**: An array of menu collections.
+- **`arr`**: An array of menu collections.
 
 - **`type`**: A string representing type of menu we are interested in (e.g., "Vegetarian" or "Non-Vegetarian").
 
