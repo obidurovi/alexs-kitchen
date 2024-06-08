@@ -19,14 +19,10 @@ interface ExpandMoreProps extends IconButtonProps {
 
 interface FoodCardProps {
   food: Food;
-  onDelete: (id: number) => void;
+  onDelete: (id: string) => void;
 }
 
-export default function FoodCard({
-  food,
-  onDelete,
-  setIsUpdate,
-}: FoodCardProps) {
+export default function FoodCard({ food, onDelete }: FoodCardProps) {
   return (
     <Card
       sx={{
@@ -57,7 +53,7 @@ export default function FoodCard({
         </IconButton>
 
         <IconButton aria-label="edit">
-          <EditModal food={food} setIsUpdate={setIsUpdate} />
+          <EditModal food={food} />
         </IconButton>
         <IconButton aria-label="delete" onClick={() => onDelete(food.id)}>
           <MdDelete />

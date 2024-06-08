@@ -23,8 +23,6 @@ export default function Home() {
 
   // handle delete data
   const handleDataDelete = async (id: string) => {
-    console.log(id);
-
     try {
       const response = await axios.delete(`http://localhost:5050/foods/${id}`);
       if (response.status === 200) {
