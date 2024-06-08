@@ -9,11 +9,10 @@ import CardActions from "@mui/material/CardActions";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { FaRegEdit } from "react-icons/fa";
-import { FaEye } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Food } from "@/types";
-import { Modal } from "@mui/material";
 import ViewModal from "./Modal/ViewModal";
+import EditModal from "./Modal/EditModal";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -50,7 +49,7 @@ export default function FoodCard({ food }: { food: Food }) {
         </IconButton>
 
         <IconButton aria-label="edit">
-          <FaRegEdit />
+          <EditModal />
         </IconButton>
         <IconButton aria-label="delete">
           <MdDelete />
