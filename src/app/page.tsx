@@ -10,6 +10,7 @@ import FoodSkeletons from "@/components/skeleton/FoodSkeleton";
 export default function Home() {
   const [foods, setFoods] = useState<Food[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isUpdate, setIsUpdate] = useState(false);
 
   useEffect(() => {
     // Fetch the foods data from the server
@@ -18,7 +19,6 @@ export default function Home() {
       setFoods(response.data);
       setLoading(false);
     };
-
     fetchFoods();
   }, []);
 
@@ -50,7 +50,12 @@ export default function Home() {
       {loading && <FoodSkeletons />}
       <div className="px-2 grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] justify-items-center gap-3">
         {foods.map((food) => (
-          <FoodCard key={food.id} food={food} onDelete={handleDataDelete} />
+          <FoodCard
+            key={food.id}
+            food={food}
+            onDelete={handleDataDelete}
+            setIsUpdate={setIsUpdate}
+          />
         ))}
       </div>
     </main>

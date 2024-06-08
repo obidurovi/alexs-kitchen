@@ -22,7 +22,11 @@ interface FoodCardProps {
   onDelete: (id: number) => void;
 }
 
-export default function FoodCard({ food, onDelete }: FoodCardProps) {
+export default function FoodCard({
+  food,
+  onDelete,
+  setIsUpdate,
+}: FoodCardProps) {
   return (
     <Card
       sx={{
@@ -53,7 +57,7 @@ export default function FoodCard({ food, onDelete }: FoodCardProps) {
         </IconButton>
 
         <IconButton aria-label="edit">
-          <EditModal food={food} />
+          <EditModal food={food} setIsUpdate={setIsUpdate} />
         </IconButton>
         <IconButton aria-label="delete" onClick={() => onDelete(food.id)}>
           <MdDelete />
