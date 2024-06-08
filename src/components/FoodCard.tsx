@@ -8,7 +8,6 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Food } from "@/types";
 import ViewModal from "./Modal/ViewModal";
@@ -18,7 +17,12 @@ interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
 }
 
-export default function FoodCard({ food }: { food: Food }) {
+interface FoodCardProps {
+  food: Food;
+  onDelete: (id: number) => void;
+}
+
+export default function FoodCard({ food, onDelete }: FoodCardProps) {
   return (
     <Card
       sx={{
@@ -49,9 +53,9 @@ export default function FoodCard({ food }: { food: Food }) {
         </IconButton>
 
         <IconButton aria-label="edit">
-          <EditModal />
+          <EditModal food={food} />
         </IconButton>
-        <IconButton aria-label="delete">
+        <IconButton aria-label="delete" onClick={() => onDelete(food.id)}>
           <MdDelete />
         </IconButton>
       </CardActions>
