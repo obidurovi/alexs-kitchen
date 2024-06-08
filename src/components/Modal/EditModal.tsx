@@ -56,18 +56,23 @@ const Fade = React.forwardRef<HTMLDivElement, FadeProps>(function Fade(
 
 const style = {
   position: "absolute" as "absolute",
-  borderRadius: 5,
   top: "50%",
   left: "50%",
-  transhtmlForm: "translate(-50%, -50%)",
-  width: 600,
+  transform: "translate(-50%, -50%)",
+  width: {
+    xs: 300, // width on extra-small screens
+    sm: 400, // width on small screens and up
+    md: 500, // width on medium screens and up
+    lg: 600, // width on large screens and up
+    xl: 700, // width on extra-large screens and up
+  },
   bgcolor: "background.paper",
-  color: "black",
+  borderRadius: "10px",
   boxShadow: 24,
   p: 4,
 };
 
-export default function EditModal() {
+export default function EditModal({ food }: { food: Food }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -98,7 +103,8 @@ export default function EditModal() {
               </h1>
               <div className="mb-5">
                 <label
-                  htmlFor="base-input"
+                  id="name"
+                  htmlFor="name"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Food Name
