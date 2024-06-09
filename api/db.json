@@ -16,7 +16,8 @@
       "id": "5",
       "name": "Onion Rings",
       "description": "Onion rings are a popular American side dish item that is usually served alongside burgers or other fast food varieties, and they are usually accompanied by ketchup, mayonnaise, or some other dipping sauce. These crispy rings are commonly found in the United States, Canada, Ireland, Asia, Australia, and the United Kingdom.",
-      "thumbnail": "https://www.tasteatlas.com/Images/Dishes/8e1198424262483fb90cd4baa3f8c190.jpg?mw=1300"
+      "thumbnail": "https://www.tasteatlas.com/Images/Dishes/8e1198424262483fb90cd4baa3f8c190.jpg?mw=1300",
+      "imageUrl": "https://www.tasteatlas.com/images/dishes/432214c2a7fa4d6f8856912fde081e8d.jpg?mw=1300"
     },
     {
       "id": "6",
@@ -45,20 +46,16 @@
     {
       "id": "10",
       "name": "Smørrebrød",
-      "description": "Smørrebrød is a traditional Danish open-faced sandwich consisting of buttered rye bread that is topped with numerous ingredients and typically accompanied by vegetables, herbs, and salads. Toppings include ingredients such as cold cuts of meat, cheeses, spreads, meatballs, caviar, and condiments such as mayonnaise.",
-      "thumbnail": "https://www.tasteatlas.com/Images/Dishes/38f732904c25404e969194da16fe3aed.jpg?mw=1300"
+      "description": "osdnfop;abnpoacnaocnoaceaeca",
+      "thumbnail": "https://www.tasteatlas.com/Images/Dishes/38f732904c25404e969194da16fe3aed.jpg?mw=1300",
+      "imageUrl": "https://www.tasteatlas.com/Images/Dishes/38f732904c25404e969194da16fe3aed.jpg?mw=130"
     },
     {
       "id": "11",
       "name": "Tzatziki",
       "description": "Tzatziki is a Greek concoction made from yogurt, cucumbers, garlic, and numerous herbs and spices such as dill, mint, or parsley. It is usually served as a sauce accompanying many meat dishes, as a simple dip, or an appetizer. Its name is derived from the Turkish word cacik, denoting a very similar dip, although some suspect that tzatziki was derived from the Indian raita dip.",
-      "thumbnail": "https://www.tasteatlas.com/Images/Dishes/e2d029df5265430daf503931b2bb8efb.jpg?mw=1300"
-    },
-    {
-      "id": "f202",
-      "name": "Football",
-      "description": "Bibim means mixed, and bap means cooked rice, so bibimbap is literally mixed rice. The rice is combined with a variety of ingredients such as sliced beef, namul (sliced vegetables), soy sauce, gochujang (thick, deep red chili pepper paste), and a raw egg on top, cooking as it is dispersed through the steaming rice.",
-      "thumbnail": "https://www.tasteatlas.com/images/dishes/4dd65e828a014639994d77ab09f5dba5.jpg?mw=1300"
+      "thumbnail": "https://www.tasteatlas.com/Images/Dishes/e2d029df5265430daf503931b2bb8efb.jpg?mw=1300",
+      "imageUrl": "https://www.tasteatlas.com/Images/Dishes/e2d029df5265430daf503931b2bb8efb.jpg?mw=130"
     }
   ]
 }
